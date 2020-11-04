@@ -9,26 +9,29 @@ using namespace std;
 
 int main() {
     
+    //Declaring
     int counterA = 0, counterB = 0, counterC = 0, counterD = 0, counterE = 0, counterF = 0, counterG = 0, counterH = 0, counterI = 0;
     int employee, i;
     int salary, wage;
     int first = 1;
     
     cout << "How many employees is there ";
-    cin >> employee;
+    cin >> employee; //Input
     
     int bonus[employee];
     
+    //Definining salaries to be inputed inside the array
     for (i = 0; i < employee; i++) {
        
         
         cout << "Enter the " << first << " salary:";
-        cin >> salary;
+        cin >> salary; //input salary
         first++;
         
         
-        wage = ((salary * 9) /100 ) + 200;
+        wage = ((salary * 9) /100 ) + 200; //calculate wage + bonus
         
+        //Comparing and counter
         if (wage >= 200 && wage <= 299){
             ++counterA;
             cout << " A" << endl;
@@ -66,9 +69,10 @@ int main() {
             cout << " I" << endl;
         }
         
-        bonus[i] = wage;
+        bonus[i] = wage; //Salary holds a place in the array at the i position
         cout << wage << endl;
     }
+    //Output List
         cout <<  "A." << setw(3) << counterA << endl;
         cout <<  "B." << setw(3) << counterB << endl;
         cout <<  "C." << setw(3) << counterC << endl;
